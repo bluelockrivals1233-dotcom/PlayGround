@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#101513" />
+    <meta name="description" content="Uma noite dourada em Los Santos. A cidade é sua." />
+    <title>AFTERGLOW — Los Santos</title>
+    <script type="module" crossorigin src="/assets/index-DbdCOcQu.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-B_S4USpc.css">
+  </head>
+  <body>
+    <div id="game">
+      <div class="vignette"></div>
+      <div id="topbar" class="topbar hidden">
+        <div class="brand"><span class="brand-mark">A</span><span>AFTERGLOW<small>LOS SANTOS</small></span></div>
+        <div class="top-center"><span class="live-dot"></span> LOS SANTOS <i>•</i> <span id="clock">00:00</span></div>
+        <button id="pause-button" class="icon-button" aria-label="Pausar">Ⅱ</button>
+      </div>
+      <section id="mission-panel" class="mission-panel hidden">
+        <div class="mission-kicker"><span class="mission-dot"></span> MISSÃO ATIVA <span class="mission-number">01 / 01</span></div>
+        <h2>Rastro dourado</h2>
+        <p>Siga o veículo marcado pelas ruas do centro. Não deixe que ele desapareça.</p>
+        <div class="follow-label"><span>VEÍCULO-ALVO</span><strong id="distance">— m</strong></div>
+        <div class="distance-track"><span id="distance-fill"></span></div>
+        <div class="mission-footer"><span>DESTINO</span><strong>VINEWOOD <span>↗</span></strong></div>
+      </section>
+      <div id="minimap-wrap" class="minimap-wrap hidden">
+        <div class="minimap-head"><span>MAPA DA CIDADE</span><span class="map-north">N ↑</span></div>
+        <canvas id="minimap" width="220" height="220" aria-label="Minimapa"></canvas>
+        <div class="minimap-foot"><i></i><span>LOS SANTOS</span></div>
+      </div>
+      <div id="bottom-hud" class="bottom-hud hidden">
+        <div class="controls-hint"><span class="keycap">W</span><span class="keycap">A</span><span class="keycap">S</span><span class="keycap">D</span><span class="hint-copy">DIRIGIR</span><span class="hint-sep"></span><span class="keycap wide">SHIFT</span><span class="hint-copy">FREIO DE MÃO</span></div>
+        <div class="speedometer"><div><strong id="speed-value">00</strong><span>KM/H</span></div><div class="speed-arc"></div></div>
+      </div>
+      <div id="touch-controls" class="touch-controls" aria-label="Controles de direção">
+        <div class="touch-steer"><button data-drive="left" aria-label="Virar à esquerda">‹</button><button data-drive="right" aria-label="Virar à direita">›</button></div>
+        <div class="touch-pedals"><button data-drive="brake" aria-label="Frear">FREIO</button><button data-drive="gas" aria-label="Acelerar">ACELERAR <span>›</span></button></div>
+      </div>
+      <div id="toast" class="toast"><span class="toast-icon">✦</span><div><strong id="toast-title">LOS SANTOS</strong><p id="toast-text">A cidade acorda ao entardecer.</p></div></div>
+      <section id="intro" class="intro">
+        <div class="intro-top"><div class="brand"><span class="brand-mark">A</span><span>AFTERGLOW<small>UMA HISTÓRIA DE LOS SANTOS</small></span></div><div class="edition">EDIÇÃO DE ENTARDECER <span>✦</span></div></div>
+        <div class="intro-content">
+          <div class="eyebrow"><span></span> UMA MISSÃO ORIGINAL</div>
+          <h1>AS LUZES<br>DA <em>CIDADE.</em></h1>
+          <p>O sol está se pondo. Um carro suspeito corta o centro em direção às colinas. Pegue a estrada e não o perca de vista.</p>
+          <button id="start-button" class="start-button"><span>INICIAR MISSÃO</span><b>↗</b></button>
+          <div class="intro-meta"><span><i>01</i> SEGUIR O ALVO</span><span><i>02</i> CHEGAR A VINEWOOD</span><span><i>03</i> GANHAR $5.000</span></div>
+        </div>
+        <div class="intro-bottom"><span>LOS SANTOS, SAN ANDREAS</span><span>18:42 <i>•</i> 24° C</span><span>UMA CIDADE. MIL HISTÓRIAS.</span></div>
+      </section>
+      <section id="pause-layer" class="modal-layer hidden"><div class="modal-card"><span class="eyebrow">UM MOMENTO</span><h2>PAUSADO</h2><p>A cidade pode esperar.</p><button id="resume-button" class="start-button"><span>VOLTAR À ESTRADA</span><b>↗</b></button><div class="pause-help">WASD / SETAS PARA DIRIGIR · ESC PARA VOLTAR</div></div></section>
+      <section id="victory" class="modal-layer hidden"><div class="modal-card victory-card"><span class="eyebrow"><span></span> MISSÃO CONCLUÍDA</span><h2>NOITE<br><em>PERFEITA.</em></h2><p>O alvo chegou a Vinewood. A cidade é sua outra vez.</p><div class="reward"><span>RECOMPENSA</span><strong id="win-reward">$5,000</strong></div><button id="play-again" class="start-button"><span>JOGAR NOVAMENTE</span><b>↻</b></button></div></section>
+    </div>
+  </body>
+</html>
